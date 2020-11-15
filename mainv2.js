@@ -5,21 +5,23 @@ button.addEventListener('click', addBookToLibrary);
 
 let myLibrary = [];
 
-function Book(title, author, pages, isRead){
-    this.title=title; 
-    this.author=author; 
-    this.pages=pages;
-    this.isRead=isRead;
-}
-
-Book.prototype.toggleStatus = function(status) {
-    status = this.isRead;
-    if (status==="yes"){
-        status = "no";
-    } else if (status==="no"){
-        status = "yes";
+class Book {
+    constructor(title, author, pages, isRead){
+        this.title=title; 
+        this.author=author; 
+        this.pages=pages;
+        this.isRead= isRead;
     }
-    return status;
+
+    toggleStatus(status){
+        status = this.isRead;
+        if (status==="yes"){
+            status = "no";
+        } else if (status==="no"){
+            status = "yes";
+        }
+        return status;
+    }
 }
 
 //object literals won't work here. can't call prototype function toggleStatus in statusBtn event listener because of them. that's why used object instantiation.
