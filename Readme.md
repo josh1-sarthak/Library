@@ -11,3 +11,4 @@ displays each book in form of a card with details such as title, author, pages a
 - classes
 - DOM Manipulation
 - CSS grids
+- HTML5 built-in client side form validation

@@ -5,13 +5,42 @@
     <title> Library </title>
     <link rel="stylesheet" href="index.css">
     <script defer src="main.js"> </script>
-    <!-- <script defer src="mainv2.js"> </script> --> 
+    <!-- <script defer src="mainv2.js"> </script>  -->
 
 </head>
 
 <body>
 <h1> Library </h1>
-<button class="addbuk"> New Book! </button>
-<div id="container"> </div>
+<div id="container"> 
+    <div id="userInput"> 
+        <form id="form">
+            <p>
+            <label for="title"> What's the book title? <abbr title="This field is mandatory" aria-label="required">*</abbr></label>
+            <input id="title" type="text" required>
+            </p>
+            <p>
+            <label for="author"> Provide Author Name <abbr title="This field is mandatory" aria-label="required">*</abbr></label>
+            <input id="author" type="text" required>
+            </p>
+            <p>
+            <label for="pages"> How many pages are there? <abbr title="This field is mandatory" aria-label="required">*</abbr></label>
+            <input id="pages" type="number" required min="1">
+            </p>
+            <p>
+                <fieldset>
+                    <legend> Have you read the book? <abbr title="This field is mandatory" aria-label="required">*</abbr> </legend>
+                     <input type="radio" required name="stat" id="r1" value="yes">
+                     <label for="r1">Yes</label>
+                     <input type="radio" required name="stat" id="r2" value="no">
+                     <label for="r2">No</label>
+                </fieldset>
+            </p>
+            <p>
+            <button class="addbuk"> New Book! </button>
+            </p>
+        </form>
+    </div>
+    <div id="shelf"> </div>
+</div>
 </body>
 </html>
